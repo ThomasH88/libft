@@ -6,7 +6,7 @@
 #    By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/10 16:42:11 by tholzheu          #+#    #+#              #
-#    Updated: 2018/10/15 14:14:44 by tholzheu         ###   ########.fr        #
+#    Updated: 2018/10/15 15:23:11 by tholzheu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ SRCS = ./ft_memset.c \
 ./len_n_word.c \
 ./size_of_nb.c \
 ./lstadd_back.c \
+./lstprint.c \
 ./count_words.c
 
 SRCO = $(SRCS:%.c=%.o)

@@ -6,7 +6,7 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 19:35:19 by tholzheu          #+#    #+#             */
-/*   Updated: 2018/10/15 14:15:20 by tholzheu         ###   ########.fr       */
+/*   Updated: 2018/10/15 15:23:15 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ t_list				*lstnew(char *s);
 void				lstadd_front(t_list **head, char *data);
 void				lstadd_back(t_list **head, char *data);
 t_list				*delete_list(t_list **head);
+void				lstprint(t_list **head);
 
 int					count_words(char const *s, char c);
 int					len_n_word(char const *s, char c, int n);
