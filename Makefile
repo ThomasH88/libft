@@ -6,7 +6,7 @@
 #    By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/10 16:42:11 by tholzheu          #+#    #+#              #
-#    Updated: 2018/10/15 16:57:54 by tholzheu         ###   ########.fr        #
+#    Updated: 2018/10/17 15:16:16 by tholzheu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,28 +77,34 @@ SRCS = ./ft_memset.c \
 ./lstadd_back.c \
 ./lstprint.c \
 ./lstsize.c \
+./get_next_line.c \
 ./count_words.c
 
 SRCO = $(SRCS:%.c=%.o)
 
 $(NAME):
-	gcc $(FLAGS) $(SRCS) -I=$(HEADER)
-	ar rcs $(NAME) $(SRCO)
+	@echo Compiling Libft...
+	@gcc $(FLAGS) $(SRCS) -I=$(HEADER)
+	@ar rcs $(NAME) $(SRCO)
 all: $(NAME)
 
 run: re
-	gcc main*.c -L. -lft -I=$(HEADER)
+	@echo Compiling with main...
+	@gcc main*.c -L. -lft -I=$(HEADER)
 clean:
-	/bin/rm -f $(SRCO)
+	@echo Cleaning .o files...
+	@/bin/rm -f $(SRCO)
 
 fclean: clean
-	/bin/rm -rf $(NAME) *.out*
+	@echo Cleaning library and executables...
+	@/bin/rm -rf $(NAME) *.out*
 
 re: fclean all
 
 git: fclean
-	git add .
-	git reset HEAD *main*
-	git status
-	git commit -m "yeah"
-	git push
+	@echo Gitting...
+	@git add .
+	@git reset HEAD *main*
+	@git status
+	@git commit -m "update"
+	@git push
