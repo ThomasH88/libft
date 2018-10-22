@@ -6,7 +6,7 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 19:35:19 by tholzheu          #+#    #+#             */
-/*   Updated: 2018/10/17 19:08:17 by tholzheu         ###   ########.fr       */
+/*   Updated: 2018/10/21 20:02:16 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 
 # define BUFF_SIZE 32
+
 typedef struct		s_list
 {
 	char			*data;
