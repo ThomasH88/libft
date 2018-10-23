@@ -6,7 +6,7 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 14:13:16 by tholzheu          #+#    #+#             */
-/*   Updated: 2018/10/21 16:54:10 by tholzheu         ###   ########.fr       */
+/*   Updated: 2018/10/23 11:10:30 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,13 @@ int		b_printf(const char *fmt, ...)
 {
 	va_list	ap;
 	int		*count;
+	int		ret;
 
 	count = (int *)malloc(sizeof(int));
 	*count = 0;
 	va_start(ap, fmt);
 	ft_cases((char *)fmt, count, ap);
-	return (*count);
+	ret = *count;
+	free(count);
+	return (ret);
 }
