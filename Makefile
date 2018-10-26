@@ -6,7 +6,7 @@
 #    By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/10 16:42:11 by tholzheu          #+#    #+#              #
-#    Updated: 2018/10/21 19:55:35 by tholzheu         ###   ########.fr        #
+#    Updated: 2018/10/25 21:02:48 by tholzheu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,7 +100,6 @@ fclean: clean
 re: fclean all
 
 git: fclean
-	make git -C b_printf/
 	git add .
 	git reset HEAD *main*
 	git status
