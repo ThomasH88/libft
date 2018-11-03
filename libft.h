@@ -6,7 +6,7 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 19:35:19 by tholzheu          #+#    #+#             */
-/*   Updated: 2018/11/03 12:01:50 by tholzheu         ###   ########.fr       */
+/*   Updated: 2018/11/03 14:26:04 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,6 @@ int					len_n_word(char const *s, char c, int n);
 int					size_of_nb(int nb);
 void				itoa_base(unsigned long nb, unsigned long base);
 int					get_next_line(const int fd, char **line);
-int					ft_str_isdigit(const char *s);
+int					ft_isnum(const char *s);
 
 #endif

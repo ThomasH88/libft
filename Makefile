@@ -6,7 +6,7 @@
 #    By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/10 16:42:11 by tholzheu          #+#    #+#              #
-#    Updated: 2018/11/03 11:56:13 by tholzheu         ###   ########.fr        #
+#    Updated: 2018/11/03 14:26:13 by tholzheu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ SRCS = ft_memset.c \
 	   lstsize.c \
 	   get_next_line.c \
 	   count_words.c \
-	   ft_str_isdigit.c \
+	   ft_isnum.c \
 
 SRCO = $(SRCS:.c=.o)
 
