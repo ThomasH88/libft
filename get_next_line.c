@@ -6,13 +6,13 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/15 19:54:36 by tholzheu          #+#    #+#             */
-/*   Updated: 2018/10/17 18:59:48 by tholzheu         ###   ########.fr       */
+/*   Updated: 2018/11/14 15:07:20 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*str_concat(char *prev, char *buf, ssize_t n)
+static char		*str_concat(char *prev, char *buf, ssize_t n)
 {
 	char	*new;
 	int		i;
@@ -39,7 +39,7 @@ char	*str_concat(char *prev, char *buf, ssize_t n)
 	return (new);
 }
 
-void	remove_last_new_line(char **rest)
+static void		remove_last_new_line(char **rest)
 {
 	int		j;
 
@@ -52,7 +52,7 @@ void	remove_last_new_line(char **rest)
 		rest[0][j - 1] = '\0';
 }
 
-int		return_line(char **rest, char **line, int i)
+static int		return_line(char **rest, char **line, int i)
 {
 	char	*tmp;
 	char	*new;
@@ -73,14 +73,14 @@ int		return_line(char **rest, char **line, int i)
 	return (1);
 }
 
-int		return_last_line(char **line, char **rest)
+static int		return_last_line(char **line, char **rest)
 {
 	*line = *rest;
 	*rest = NULL;
 	return (1);
 }
 
-int		get_next_line(const int fd, char **line)
+int				get_next_line(const int fd, char **line)
 {
 	ssize_t			br;
 	char			buff[BUFF_SIZE];
