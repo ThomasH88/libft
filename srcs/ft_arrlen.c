@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib_lstprint.c                                     :+:      :+:    :+:   */
+/*   ft_arrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 16:37:49 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/23 16:38:07 by tholzheu         ###   ########.fr       */
+/*   Created: 2018/11/15 15:58:56 by tholzheu          #+#    #+#             */
+/*   Updated: 2018/11/15 16:16:41 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	lib_lstprint(t_liblist **head)
+size_t		ft_arrlen(char **arr)
 {
-	t_liblist	*current;
+	size_t	i;
 
-	if (!head || !*head)
-		return ;
-	current = *head;
-	while (current)
-	{
-		ft_putstr(current->data);
-		ft_putchar('\n');
-		current = current->next;
-	}
+	i = 0;
+	while (arr && arr[i])
+		i++;
+	return (i);
 }

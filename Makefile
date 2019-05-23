@@ -6,7 +6,7 @@
 #    By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/10 16:42:11 by tholzheu          #+#    #+#              #
-#    Updated: 2019/05/23 16:34:55 by tholzheu         ###   ########.fr        #
+#    Updated: 2019/05/23 16:42:45 by tholzheu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,6 +95,10 @@ OBJS = $(addprefix $(ODIR)/, ft_memset.o \
 	   lib_lstsize.o \
 	   get_next_line.o \
 	   count_words.o \
+	   ft_arrdel.o \
+	   ft_arrdel_size.o \
+	   ft_arrlen.o \
+	   ft_arrprint.o \
 	   ft_isnum.o)
 
 $(ODIR)/%.o: $(SDIR)/%.c $(HEADERS)

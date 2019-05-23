@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib_lstprint.c                                     :+:      :+:    :+:   */
+/*   ft_arrdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 16:37:49 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/23 16:38:07 by tholzheu         ###   ########.fr       */
+/*   Created: 2018/11/14 21:12:44 by tholzheu          #+#    #+#             */
+/*   Updated: 2018/11/15 18:24:58 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	lib_lstprint(t_liblist **head)
+void	ft_arrdel(char ***arr)
 {
-	t_liblist	*current;
+	int		i;
+	char	**del;
 
-	if (!head || !*head)
+	if (!arr)
 		return ;
-	current = *head;
-	while (current)
-	{
-		ft_putstr(current->data);
-		ft_putchar('\n');
-		current = current->next;
-	}
+	del = *arr;
+	i = 0;
+	while (del && del[i])
+		ft_strdel(&del[i++]);
+	free(*arr);
+	*arr = NULL;
 }

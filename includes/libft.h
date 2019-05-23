@@ -6,7 +6,7 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 19:35:19 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/23 16:30:29 by tholzheu         ###   ########.fr       */
+/*   Updated: 2019/05/23 16:41:55 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void				ft_putnbr_fd(int n, int fd);
 t_liblist			*lib_lstnew(char *s);
 void				lib_lstadd_front(t_liblist **head, char *data);
 void				lib_lstadd_back(t_liblist **head, char *data);
-t_liblist			*delete_lib_list(t_liblist **head);
+t_liblist			*lib_lstdel(t_liblist **head);
 void				lib_lstprint(t_liblist **head);
 int					lib_lstsize(t_liblist **head);
 
@@ -93,5 +93,11 @@ int					size_of_nb(int nb);
 void				itoa_base(unsigned long nb, unsigned long base);
 int					get_next_line(const int fd, char **line);
 int					ft_isnum(const char *s);
+
+
+void				ft_arrdel(char ***arr);
+void				ft_arrdel_size(char ***arr, size_t size);
+size_t				ft_arrlen(char **arr);
+void				ft_arrprint(char **arr);
 
 #endif
