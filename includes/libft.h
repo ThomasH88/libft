@@ -6,7 +6,7 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 19:35:19 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/23 16:24:42 by tholzheu         ###   ########.fr       */
+/*   Updated: 2019/05/23 16:30:29 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,12 +80,12 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
-t_liblist			*lstnew(char *s);
-void				lstadd_front(t_liblist **head, char *data);
-void				lstadd_back(t_liblist **head, char *data);
-t_liblist			*delete_list(t_liblist **head);
-void				lstprint(t_liblist **head);
-int					lstsize(t_liblist **head);
+t_liblist			*lib_lstnew(char *s);
+void				lib_lstadd_front(t_liblist **head, char *data);
+void				lib_lstadd_back(t_liblist **head, char *data);
+t_liblist			*delete_lib_list(t_liblist **head);
+void				lib_lstprint(t_liblist **head);
+int					lib_lstsize(t_liblist **head);
 
 int					count_words(char const *s, char c);
 int					len_n_word(char const *s, char c, int n);

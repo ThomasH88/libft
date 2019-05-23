@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lstnew.c                                           :+:      :+:    :+:   */
+/*   lstdel.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/15 13:47:25 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/23 16:26:44 by tholzheu         ###   ########.fr       */
+/*   Created: 2018/10/15 13:58:13 by tholzheu          #+#    #+#             */
+/*   Updated: 2019/05/23 16:31:13 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-t_liblist	*lstnew(char *s)
+t_liblist	*delete_lib_list(t_liblist **head)
 {
-	t_liblist			*new;
+	t_liblist		*current;
+	t_liblist		*tmp;
 
-	if ((new = (t_liblist *)malloc(sizeof(t_liblist))) == NULL)
+	if (!head)
 		return (NULL);
-	new->data = s;
-	new->next = NULL;
-	return (new);
+	current = *head;
+	while (current)
+	{
+		tmp = current->next;
+		ft_strdel(&(current->data));
+		free(current);
+		current = NULL;
+		current = tmp;
+	}
+	return (NULL);
 }

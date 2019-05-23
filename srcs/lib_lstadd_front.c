@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lstsize.c                                          :+:      :+:    :+:   */
+/*   lstadd_front.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/15 16:52:46 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/23 16:26:44 by tholzheu         ###   ########.fr       */
+/*   Created: 2018/10/15 13:54:25 by tholzheu          #+#    #+#             */
+/*   Updated: 2019/05/23 16:31:47 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		lstsize(t_liblist **head)
+void	lib_lstadd_front(t_liblist **head, char *data)
 {
-	t_liblist	*current;
-	int			count;
+	t_liblist	*tmp;
+	t_liblist	*new;
 
-	count = 0;
-	if (!head || !*head)
-		return (0);
-	current = *head;
-	while (current)
+	if (!head)
+		return ;
+	new = lib_lstnew(data);
+	if (!*head)
+		*head = new;
+	else
 	{
-		current = current->next;
-		count++;
+		tmp = new;
+		tmp->next = *head;
+		new = *head;
+		*head = tmp;
 	}
-	return (count);
 }

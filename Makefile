@@ -6,7 +6,7 @@
 #    By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/10 16:42:11 by tholzheu          #+#    #+#              #
-#    Updated: 2019/05/18 20:56:31 by tholzheu         ###   ########.fr        #
+#    Updated: 2019/05/23 16:34:55 by tholzheu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,15 +84,15 @@ OBJS = $(addprefix $(ODIR)/, ft_memset.o \
 	   ft_putstr_fd.o \
 	   ft_putendl_fd.o \
 	   ft_putnbr_fd.o \
-	   lstnew.o \
-	   lstdel.o \
-	   lstadd_front.o \
+	   lib_lstnew.o \
+	   lib_lstdel.o \
+	   lib_lstadd_front.o \
 	   itoa_base.o \
 	   len_n_word.o \
 	   size_of_nb.o \
-	   lstadd_back.o \
-	   lstprint.o \
-	   lstsize.o \
+	   lib_lstadd_back.o \
+	   lib_lstprint.o \
+	   lib_lstsize.o \
 	   get_next_line.o \
 	   count_words.o \
 	   ft_isnum.o)

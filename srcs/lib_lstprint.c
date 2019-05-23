@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lstadd_back.c                                      :+:      :+:    :+:   */
+/*   lstprint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/15 13:49:25 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/23 16:26:44 by tholzheu         ###   ########.fr       */
+/*   Created: 2018/10/15 15:19:30 by tholzheu          #+#    #+#             */
+/*   Updated: 2019/05/23 16:31:13 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void		lstadd_back(t_liblist **head, char *data)
+void	lib_lstprint(t_liblist **head)
 {
 	t_liblist	*current;
-	t_liblist	*new;
 
-	if (!head)
+	if (!head || !*head)
 		return ;
-	new = lstnew(data);
-	if (!*head)
-	{
-		*head = new;
-		return ;
-	}
 	current = *head;
-	while (current && current->next)
+	while (current)
+	{
+		ft_putstr(current->data);
+		ft_putchar('\n');
 		current = current->next;
-	current->next = new;
+	}
 }
