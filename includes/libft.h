@@ -6,7 +6,7 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 19:35:19 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/18 20:32:57 by tholzheu         ###   ########.fr       */
+/*   Updated: 2019/05/23 16:24:42 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 
 # define BUFF_SIZE 32
 
-typedef struct		s_list
+typedef struct		s_liblist
 {
-	char			*data;
-	struct s_list	*next;
-}					t_list;
+	char				*data;
+	struct s_liblist	*next;
+}					t_liblist;
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
@@ -80,12 +80,12 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
-t_list				*lstnew(char *s);
-void				lstadd_front(t_list **head, char *data);
-void				lstadd_back(t_list **head, char *data);
-t_list				*delete_list(t_list **head);
-void				lstprint(t_list **head);
-int					lstsize(t_list **head);
+t_liblist			*lstnew(char *s);
+void				lstadd_front(t_liblist **head, char *data);
+void				lstadd_back(t_liblist **head, char *data);
+t_liblist			*delete_list(t_liblist **head);
+void				lstprint(t_liblist **head);
+int					lstsize(t_liblist **head);
 
 int					count_words(char const *s, char c);
 int					len_n_word(char const *s, char c, int n);

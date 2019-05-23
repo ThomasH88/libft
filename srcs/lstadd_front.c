@@ -6,16 +6,16 @@
 /*   By: tholzheu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/15 13:54:25 by tholzheu          #+#    #+#             */
-/*   Updated: 2019/05/18 20:27:42 by tholzheu         ###   ########.fr       */
+/*   Updated: 2019/05/23 16:26:44 by tholzheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	lstadd_front(t_list **head, char *data)
+void	lstadd_front(t_liblist **head, char *data)
 {
-	t_list	*tmp;
-	t_list	*new;
+	t_liblist	*tmp;
+	t_liblist	*new;
 
 	if (!head)
 		return ;
