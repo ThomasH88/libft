@@ -22,7 +22,7 @@ NAME = libft.a
 
 IDIR = includes
 
-HEADER = $(addprefix $(IDIR)/, libft.h)
+HEADERS = $(addprefix $(IDIR)/, libft.h)
 
 CC = gcc
 
